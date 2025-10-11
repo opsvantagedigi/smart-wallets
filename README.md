@@ -51,6 +51,29 @@ If instead you want to set up your own configurations from scratch you should:
 
 Note: for production, you should [protect](https://www.alchemy.com/docs/wallets/resources/faqs#how-should-i-protect-my-api-key-and-policy-id-in-the-frontend) your API key and policy ID behind a server rather than exposing client side.
 
+## Environment Setup
+
+Create a `.env.local` file in the project root using `.env.example` as a guide. The file should contain the placeholder keys shown in `.env.example` and be filled with your own values before running the app. Do NOT commit `.env.local` to source control — it contains sensitive keys.
+
+Example:
+
+```bash
+cp .env.example .env.local
+# then open .env.local and replace placeholders with your keys
+```
+
+### Secret scanning (pre-commit)
+
+This repository enforces a pre-commit secret scan to help prevent accidental commits of sensitive keys. We use `gitleaks` via a Husky pre-commit hook which runs against staged files. If a potential secret is detected, the commit will be blocked and you'll be prompted to remove or redact the secret.
+
+To enable locally:
+
+```powershell
+npm install
+npm run prepare
+```
+
+
 ### Run your app!
 
 ```bash
