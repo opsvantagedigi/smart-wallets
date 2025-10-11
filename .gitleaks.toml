@@ -1,36 +1,35 @@
-title = "gitleaks config"
+title = "OpsVantage Gitleaks Config"
 
 [allowlist]
   description = "Allow known safe strings and files to reduce false positives"
+  files = [
+    ".env.local",
+    ".env.development",
+    ".env.test",
+    ".env.example",
+    "package-lock.json",
+    "yarn.lock",
+    "node_modules/**"
+  ]
   regexes = [
     '^sha512-',                                # package-lock integrity hashes
     '^\s*"integrity":\s*"sha\d+-[^"]+"$',      # package-lock integrity lines
     'integrity',                               # package-lock integrity entries
-    'node_modules/',                           # skip dependencies
-    'package-lock.json',                       # skip lockfile noise
-    '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$'   # timestamps sometimes flagged
-  ]
-
-[allow]
-  files = [
-    "**/*.js",
-    "**/*.ts",
-    "**/*.json",
-    "**/*.env",
-    "**/*.env.*",
-    "**/*.md",
-    "**/package-lock.json",
-    "**/yarn.lock"
+    '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$',  # timestamps sometimes flagged
+    '^NEXT_PUBLIC_.*$',                        # allow all NEXT_PUBLIC_* env vars
+    '^REACT_APP_.*$',                          # allow React-style public env vars
+    '^VITE_.*$'                                # allow Vite-style public env vars
   ]
 
 [allow_env_names]
   description = "Allow harmless environment variable name references"
   regexes = [
-    '^.*NEXT_PUBLIC_ALCHEMY_API_KEY.*$',
-    '^NEXT_PUBLIC_.*$',   # allow all NEXT_PUBLIC_* env vars
-    '^REACT_APP_.*$',     # allow React-style public env vars
-    '^VITE_.*$'           # allow Vite-style public env vars
+    '^NEXT_PUBLIC_ALCHEMY_API_KEY.*$',
+    '^NEXT_PUBLIC_.*$',
+    '^REACT_APP_.*$',
+    '^VITE_.*$'
   ]
 
 [deny]
+  description = "Custom deny patterns (extend as needed)"
   regexes = []
