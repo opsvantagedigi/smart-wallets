@@ -2,7 +2,6 @@ title = "gitleaks config"
 
 [allowlist]
   description = "Allow known safe strings and files to reduce false positives"
-  # Keep these conservative; scoped to typical false positives
   regexes = [
     '^sha512-',                                # package-lock integrity hashes
     '^\s*"integrity":\s*"sha\d+-[^"]+"$',      # package-lock integrity lines
@@ -13,7 +12,6 @@ title = "gitleaks config"
   ]
 
 [allow]
-  # Allowed file globs to reduce noise for known harmless files
   files = [
     "**/*.js",
     "**/*.ts",
@@ -28,9 +26,11 @@ title = "gitleaks config"
 [allow_env_names]
   description = "Allow harmless environment variable name references"
   regexes = [
-    '^.*NEXT_PUBLIC_ALCHEMY_API_KEY.*$'
+    '^.*NEXT_PUBLIC_ALCHEMY_API_KEY.*$',
+    '^NEXT_PUBLIC_.*$',   # allow all NEXT_PUBLIC_* env vars
+    '^REACT_APP_.*$',     # allow React-style public env vars
+    '^VITE_.*$'           # allow Vite-style public env vars
   ]
 
 [deny]
-  # Additional deny patterns can be added here if you want stricter checks
   regexes = []
