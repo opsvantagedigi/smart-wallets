@@ -1,1 +1,10 @@
-**/node_modules/**
+# Ignore local dev environment files
+.env.local
+.env.development
+.env.test
+.env.example
+
+# Ignore public keys and non-sensitive placeholders
+NEXT_PUBLIC_*
+REACT_APP_*
+VITE_*
