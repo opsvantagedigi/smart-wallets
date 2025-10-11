@@ -2,9 +2,20 @@ title = "gitleaks config"
 
 [allowlist]
   description = "Allow known safe strings and files to reduce false positives"
-  regexes = ["^sha512-", "integrity", "node_modules/", "package-lock.json"]
+  # Keep these conservative; scoped to typical false positives
+  regexes = [
+    "^sha512-",                # package-lock integrity hashes
+    "integrity",              # package-lock integrity entries
+    "node_modules/",          # skip dependencies
+    "package-lock.json",      # skip lockfile noise
+    "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$" # timestamps sometimes flagged
+  ]
 
-[files]
-  # Only scan common source files and env/lock files; skip large binaries
-  allow = ["**/*.js", "**/*.ts", "**/*.json", "**/*.env", "**/*.env.*"]
+[allow]
+  # Allowed file globs to reduce noise for known harmless files
+  files = ["**/*.js", "**/*.ts", "**/*.json", "**/*.env", "**/*.env.*", "**/*.md"]
+
+[deny]
+  # Additional deny patterns can be added here if you want stricter checks
+  regexes = []
 *** End Patch

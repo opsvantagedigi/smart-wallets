@@ -82,6 +82,40 @@ The workflow is defined at `.github/workflows/secret-scan.yml` and uses a local 
 
 If the CI detects a potential secret, the workflow will fail and report findings in `gitleaks-report.json`.
 
+## 🔐 Security & Trust Signals
+
+This project is configured to be a sanctuary for secrets:
+
+- Pre-commit: Husky runs `gitleaks detect --staged` to prevent accidental commits of secrets.
+- Pre-push: Hook prevents pushing `.env.local` if it's tracked or staged.
+- CI: GitHub Actions (`.github/workflows/secret-scan.yml`) runs `gitleaks` on pushes and PRs to `main` and will fail the job if leaks are found. A comment will be left on PRs with a warning.
+
+Badges
+
+- Secret scan: ![Secret Scan](https://github.com/opsvantage-digital/smart-wallets/actions/workflows/secret-scan.yml/badge.svg)
+
+Enable hooks locally:
+
+```powershell
+npm install
+npm run prepare
+```
+
+Baseline
+
+You can generate a gitleaks baseline to suppress known false positives. Example:
+
+```bash
+# install gitleaks locally (or use the GitHub Action)
+# run a local detect to create a baseline
+gitleaks detect --source . --report-format json > gitleaks-report.json
+# review gitleaks-report.json and then save allowed findings to .gitleaks.baseline.json
+```
+
+Add `.gitleaks.baseline.json` to `.gitignore` if you don't want it tracked, or commit it to share the baseline with other contributors.
+
+If you'd like additional badges (build, license, coverage), I can add them.
+
 
 
 ### Run your app!
