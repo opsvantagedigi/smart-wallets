@@ -73,6 +73,14 @@ npm install
 npm run prepare
 ```
 
+## CI secret scanning
+
+This repo includes a GitHub Actions workflow that runs `gitleaks` on pushes and pull requests to `main`.
+The workflow is defined at `.github/workflows/secret-scan.yml` and uses a local `.gitleaks.toml` config to reduce false positives.
+
+If the CI detects a potential secret, the workflow will fail and report findings in `gitleaks-report.json`.
+
+
 
 ### Run your app!
 
