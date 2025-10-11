@@ -1,5 +1,8 @@
 # Smart Wallets Quickstart (Next.js)
 
+<!-- Replace OWNER and REPO with your GitHub handle and repo name -->
+![Secret Scan](https://github.com/OWNER/REPO/actions/workflows/secret-scan.yml/badge.svg)
+
 Use this template to get started with **embedded smart wallets** using [Alchemy Account Kit](https://www.alchemy.com/docs/wallets).
 
 ## ✨ Features
