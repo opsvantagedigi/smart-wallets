@@ -1,5 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Run Gitleaks directly from the installed binary
-"/c/Program Files/Gitleaks/gitleaks.exe" detect --no-banner --source .
+"/c/Program Files/Gitleaks/gitleaks.exe" detect \
+  --no-banner \
+  --source . \
+  --baseline-path .gitleaks.baseline.json
