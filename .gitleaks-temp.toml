@@ -1,0 +1,25 @@
+title = "Temporary rules for final scan"
+
+[[rules]]
+id = "aws-access-key"
+description = "AWS Access Key"
+regex = '''AKIA[0-9A-Z]{16}'''
+tags = ["key","aws"]
+
+[[rules]]
+id = "private-key-header"
+description = "Private key header"
+regex = '''-----BEGIN PRIVATE KEY-----'''
+tags = ["key","private"]
+
+[[rules]]
+id = "jwt-like"
+description = "JWT-like token prefix"
+regex = '''eyJ[A-Za-z0-9_-]{10,}'''
+tags = ["token","jwt"]
+
+[[rules]]
+id = "generic-api-key-equals"
+description = "Generic api_key= style secret"
+regex = '''(?i)\b(api_key|api-key|token|secret|password)\s*[=:]\s*[^\s'\"]{8,}'''
+tags = ["secret","generic"]

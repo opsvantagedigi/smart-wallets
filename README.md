@@ -1,6 +1,6 @@
 # Smart Wallets Quickstart (Next.js)
 
-![Secret Scan](https://github.com/opsvantage-digital/smart-wallets/actions/workflows/secret-scan.yml/badge.svg)
+![Secret Scan](https://github.com/opsvantage-digital/smart-wallets/actions/workflows/secret-scan.yml/badge.svg) ![Coverage](https://codecov.io/gh/opsvantage-digital/smart-wallets/branch/main/graph/badge.svg)
 
 Use this template to get started with **embedded smart wallets** using [Alchemy Account Kit](https://www.alchemy.com/docs/wallets).
 

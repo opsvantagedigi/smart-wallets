@@ -1,1 +1,17 @@
-[]
+
+[
+  {
+    "rule": "package-lock-integrity",
+    "file": "**/package-lock.json",
+    "line": 0,
+    "match": "package-lock integrity hashes",
+    "notes": "Allow integrity hash lines in lockfiles as false positives"
+  },
+  {
+    "rule": "env-var-ref",
+    "file": "config.ts",
+    "line": 0,
+    "match": "NEXT_PUBLIC_ALCHEMY_API_KEY",
+    "notes": "Env var name referenced in source, not a secret literal"
+  }
+]

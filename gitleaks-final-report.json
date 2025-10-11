@@ -1,0 +1,48 @@
+[
+ {
+  "RuleID": "generic-api-key-equals",
+  "Description": "Generic api_key= style secret",
+  "StartLine": 9,
+  "EndLine": 9,
+  "StartColumn": 8,
+  "EndColumn": 57,
+  "Match": "API_KEY = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;",
+  "Secret": "API_KEY",
+  "File": "config.ts",
+  "SymlinkFile": "",
+  "Commit": "19b028460508a521c0d9ac12fcd488c135b2b83f",
+  "Entropy": 2.807355,
+  "Author": "OpsVantage Dev",
+  "Email": "dev@opsvantage.local",
+  "Date": "2025-10-11T11:51:38Z",
+  "Message": "Initial commit from Create Next App",
+  "Tags": [
+   "secret",
+   "generic"
+  ],
+  "Fingerprint": "19b028460508a521c0d9ac12fcd488c135b2b83f:config.ts:generic-api-key-equals:9"
+ },
+ {
+  "RuleID": "jwt-like",
+  "Description": "JWT-like token prefix",
+  "StartLine": 15633,
+  "EndLine": 15633,
+  "StartColumn": 67,
+  "EndColumn": 80,
+  "Match": "eyJQ2lvoKv9GBK",
+  "Secret": "eyJQ2lvoKv9GBK",
+  "File": "package-lock.json",
+  "SymlinkFile": "",
+  "Commit": "19b028460508a521c0d9ac12fcd488c135b2b83f",
+  "Entropy": 3.5216405,
+  "Author": "OpsVantage Dev",
+  "Email": "dev@opsvantage.local",
+  "Date": "2025-10-11T11:51:38Z",
+  "Message": "Initial commit from Create Next App",
+  "Tags": [
+   "token",
+   "jwt"
+  ],
+  "Fingerprint": "19b028460508a521c0d9ac12fcd488c135b2b83f:package-lock.json:jwt-like:15633"
+ }
+]
