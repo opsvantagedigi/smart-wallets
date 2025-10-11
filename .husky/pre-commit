@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx gitleaks detect --staged --no-banner
+# Run Gitleaks directly from the installed binary
+"/c/Program Files/Gitleaks/gitleaks.exe" detect --no-banner --source .

@@ -4,25 +4,33 @@ title = "gitleaks config"
   description = "Allow known safe strings and files to reduce false positives"
   # Keep these conservative; scoped to typical false positives
   regexes = [
-    "^sha512-",                # package-lock integrity hashes
-    "^\s*\"integrity\":\s*\"sha\\d+-[^\"]+\"$",  # package-lock integrity lines
-    "integrity",              # package-lock integrity entries
-    "node_modules/",          # skip dependencies
-    "package-lock.json",      # skip lockfile noise
-    "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$" # timestamps sometimes flagged
+    '^sha512-',                                # package-lock integrity hashes
+    '^\s*"integrity":\s*"sha\d+-[^"]+"$',      # package-lock integrity lines
+    'integrity',                               # package-lock integrity entries
+    'node_modules/',                           # skip dependencies
+    'package-lock.json',                       # skip lockfile noise
+    '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$'   # timestamps sometimes flagged
   ]
 
 [allow]
   # Allowed file globs to reduce noise for known harmless files
-  files = ["**/*.js", "**/*.ts", "**/*.json", "**/*.env", "**/*.env.*", "**/*.md", "**/package-lock.json", "**/yarn.lock"]
+  files = [
+    "**/*.js",
+    "**/*.ts",
+    "**/*.json",
+    "**/*.env",
+    "**/*.env.*",
+    "**/*.md",
+    "**/package-lock.json",
+    "**/yarn.lock"
+  ]
 
 [allow_env_names]
   description = "Allow harmless environment variable name references"
   regexes = [
-    "^.*NEXT_PUBLIC_ALCHEMY_API_KEY.*$"
+    '^.*NEXT_PUBLIC_ALCHEMY_API_KEY.*$'
   ]
 
 [deny]
   # Additional deny patterns can be added here if you want stricter checks
   regexes = []
-*** End Patch
