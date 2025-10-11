@@ -1,5 +1,12 @@
 # Smart Wallets Quickstart (Next.js)
 
+## 🛡️ Guardian Status
+
+![Guardian Verified](https://img.shields.io/badge/Gitleaks%20Scan-Passed-brightgreen?style=flat-square&logo=git&logoColor=white)
+
+This repository has passed all Gitleaks scans using a custom TOML config and baseline.  
+No secrets detected. Guardian aligned. Vault sealed.
+
 ![Secret Scan](https://github.com/opsvantage-digital/smart-wallets/actions/workflows/secret-scan.yml/badge.svg) ![Coverage](https://codecov.io/gh/opsvantage-digital/smart-wallets/branch/main/graph/badge.svg)
 
 Use this template to get started with **embedded smart wallets** using [Alchemy Account Kit](https://www.alchemy.com/docs/wallets).
