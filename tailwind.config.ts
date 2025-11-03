@@ -8,6 +8,10 @@ export default withAccountKitUi({
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // Disable textWrap core plugin to avoid emitting CSS `text-wrap` utilities
+  corePlugins: {
+    textWrap: false,
+  },
   theme: {
     extend: {
       borderRadius: {
