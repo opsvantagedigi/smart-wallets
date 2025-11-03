@@ -34,7 +34,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${inter.variable} ${orbitron.variable}`}>
-      <body className="font-body brand-gradient min-h-screen text-foreground">
+      <body className="font-body min-h-screen bg-background text-foreground">
         <Providers initialState={initialState}>{children}</Providers>
       </body>
     </html>
