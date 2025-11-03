@@ -310,12 +310,16 @@ export default function NFTMarketplacePage() {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 ${viewMode === 'grid' ? 'bg-purple-600' : 'bg-white/10'} text-white hover:bg-purple-700 transition-colors`}
+                  aria-label="Switch to grid view"
+                  title="Switch to grid view"
                 >
                   <Grid3x3 className="h-5 w-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 ${viewMode === 'list' ? 'bg-purple-600' : 'bg-white/10'} text-white hover:bg-purple-700 transition-colors`}
+                  aria-label="Switch to list view"
+                  title="Switch to list view"
                 >
                   <List className="h-5 w-5" />
                 </button>

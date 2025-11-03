@@ -111,6 +111,7 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
             <Link href="/security" className="hover:text-cyan-400 transition-colors">Security</Link>
             <Link href="/staking" className="hover:text-cyan-400 transition-colors">Staking</Link>
             <Link href="/nft-marketplace" className="hover:text-cyan-400 transition-colors">NFTs</Link>
+            <Link href="/pricing" className="hover:text-cyan-400 transition-colors">Pricing</Link>
             <Link href="/testimonials" className="hover:text-cyan-400 transition-colors">Reviews</Link>
             <Link href="/about" className="hover:text-cyan-400 transition-colors">About</Link>
           </div>

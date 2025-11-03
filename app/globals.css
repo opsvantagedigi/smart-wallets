@@ -24,10 +24,12 @@
   .text-balance {
     /* Fallback for older browsers */
     text-align: center;
-    /* Vendor prefix for WebKit browsers */
-    -webkit-text-wrap: balance;
-    /* Modern browsers - progressive enhancement */
-    text-wrap: balance;
+    /* Better cross-browser compatibility */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* Improved text wrapping for better balance */
+    hyphens: auto;
+    line-height: 1.4;
   }
   
   /* Custom Scrollbar */
