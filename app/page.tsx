@@ -16,9 +16,9 @@ export default function Home() {
   // If user is connected, show the main app
   if (signerStatus.isConnected) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
+      <div className="min-h-screen">
         <Header />
-        <div className="bg-bg-main bg-cover bg-center bg-no-repeat h-[calc(100vh-4rem)]">
+        <div className="h-[calc(100vh-4rem)]">
           <main className="container mx-auto px-4 py-8 h-full">
             <div className="grid gap-8 md:grid-cols-[1fr_2fr]">
               <div className="flex flex-col gap-8">
@@ -36,9 +36,9 @@ export default function Home() {
   // If user clicked "Get Started", show login
   if (showLogin) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
+      <div className="min-h-screen">
         <Header />
-        <div className="bg-bg-main bg-cover bg-center bg-no-repeat h-[calc(100vh-4rem)]">
+        <div className="h-[calc(100vh-4rem)]">
           <main className="container mx-auto px-4 py-8 h-full">
             <div className="flex justify-center items-center h-full pb-[4rem]">
               <LoginCard />
@@ -51,7 +51,7 @@ export default function Home() {
 
   // Show landing page by default
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
+    <div className="min-h-screen">
       <Header />
       <LandingPage onGetStarted={() => setShowLogin(true)} />
     </div>

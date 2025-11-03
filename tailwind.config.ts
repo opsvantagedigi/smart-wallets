@@ -19,6 +19,10 @@ export default withAccountKitUi({
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        body: ["var(--font-body)"],
+        display: ["var(--font-display)"],
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -53,6 +57,11 @@ export default withAccountKitUi({
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        brand: {
+          blue: "var(--brand-blue)",
+          green: "var(--brand-green)",
+          yellow: "var(--brand-yellow)",
+        },
         chart: {
           "1": "hsl(var(--chart-1))",
           "2": "hsl(var(--chart-2))",
@@ -63,12 +72,13 @@ export default withAccountKitUi({
       },
       backgroundImage: {
         "bg-main": "url('/bg-main.webp')",
+        "brand-gradient": "linear-gradient(135deg, var(--brand-blue), var(--brand-green), var(--brand-yellow))",
       },
     },
   },
   colors: {
-    "btn-primary": createColorSet("#E82594", "#FF66CC"),
-    "fg-accent-brand": createColorSet("#E82594", "#FF66CC"),
+    "btn-primary": createColorSet("#003B73", "#007F5F"),
+    "fg-accent-brand": createColorSet("#003B73", "#FFD166"),
   },
   plugins: [require("tailwindcss-animate")],
 });
