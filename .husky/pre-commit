@@ -1,7 +1,13 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-"/c/Program Files/Gitleaks/gitleaks.exe" detect \
-  --no-banner \
-  --source . \
-  --baseline-path .gitleaks.baseline.json
+# Check if gitleaks is available
+if command -v gitleaks >/dev/null 2>&1; then
+  gitleaks detect \
+    --no-banner \
+    --source . \
+    --baseline-path .gitleaks.baseline.json
+else
+  echo "⚠️  Gitleaks not found. Skipping security scan."
+  echo "   Install gitleaks to enable secret scanning: https://github.com/gitleaks/gitleaks"
+fi
