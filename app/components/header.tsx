@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
-import { useLogout, useSignerStatus } from "@account-kit/react";
+import { useLogout, useSignerStatus, useAuthModal } from "@account-kit/react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
   const { logout } = useLogout();
   const { isConnected } = useSignerStatus();
+  const { openAuthModal } = useAuthModal();
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-white/5 dark:bg-black/20 backdrop-blur supports-[backdrop-filter]:bg-white/10">
@@ -25,8 +26,18 @@ export default function Header() {
           <Link href="/security" className="hover:text-primary">Security</Link>
         </nav>
 
-        {isConnected && (
-          <div className="ml-auto">
+        <div className="ml-auto flex items-center gap-3">
+          {!isConnected && (
+            <Button
+              size="sm"
+              onClick={() => openAuthModal()}
+              title="Create or connect your smart wallet"
+              aria-label="Create or connect your smart wallet"
+            >
+              Get Started
+            </Button>
+          )}
+          {isConnected && (
             <Button
               variant="ghost"
               size="sm"
@@ -38,8 +49,8 @@ export default function Header() {
               <LogOut className="h-4 w-4" />
               <span>Logout</span>
             </Button>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </header>
   );
