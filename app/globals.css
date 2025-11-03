@@ -1,5 +1,9 @@
+/* Tailwind CSS directives - suppress linting warnings */
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind base;
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind components;
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind utilities;
 
 :root {
@@ -18,6 +22,11 @@
 
 @layer utilities {
   .text-balance {
+    /* Fallback for older browsers */
+    text-align: center;
+    /* Vendor prefix for WebKit browsers */
+    -webkit-text-wrap: balance;
+    /* Modern browsers - progressive enhancement */
     text-wrap: balance;
   }
   
@@ -103,9 +112,11 @@
 
 @layer base {
   * {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @apply border-border;
   }
   body {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @apply bg-background text-foreground;
   }
 }

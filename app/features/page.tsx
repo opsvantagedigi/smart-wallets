@@ -10,6 +10,7 @@ import {
   Infinity, Target, Sparkles, Settings
 } from 'lucide-react';
 import { useState } from 'react';
+import NFTVaultComponent from '@/app/components/nft-vault';
 
 export default function FeaturesPage() {
   const [activeTab, setActiveTab] = useState('security');
@@ -386,6 +387,27 @@ export default function FeaturesPage() {
               </div>
             )}
           </div>
+        </div>
+
+        {/* NFT Vault Demo Section */}
+        <div className="mt-32">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-lg rounded-full px-6 py-2 border border-white/20 mb-6">
+              <Gem className="h-5 w-5 text-purple-400" />
+              <span className="text-purple-400 font-semibold">NFT Portfolio Management</span>
+            </div>
+            
+            <h2 className="text-5xl font-bold text-white mb-6">
+              Your <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Digital Assets</span> Hub
+            </h2>
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Manage, track, and showcase your entire NFT collection with real-time analytics, 
+              portfolio insights, and seamless trading capabilities.
+            </p>
+          </div>
+
+          <NFTVaultComponent />
         </div>
 
         {/* CTA Section */}
