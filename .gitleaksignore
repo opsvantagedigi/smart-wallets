@@ -1,10 +1,3 @@
-# Ignore local dev environment files
-.env.local
-.env.development
-.env.test
-.env.example
-
-# Ignore public keys and non-sensitive placeholders
-NEXT_PUBLIC_*
-REACT_APP_*
-VITE_*
+# GitLeaks uses specific fingerprint format, not glob patterns
+# To allowlist specific findings, use: gitleaks:allow
+# File-based ignores don't work as expected in .gitleaksignore
