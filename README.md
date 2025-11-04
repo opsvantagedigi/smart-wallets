@@ -169,6 +169,26 @@ npm run start   # run production build
 npm run lint    # lint code
 ```
 
+## 🪙 MARZ Token Reputation (Etherscan + Aggregators)
+
+This repo includes a public MARZ Token page at `/marz-token` with Etherscan links and an “Add to Wallet” action.
+
+Quick setup checklist:
+
+- Verify contract on Etherscan for `0x46ed4cbc6920895c484564d34ad8ca2d1f912654` (compiler, optimization, runs, constructor args).
+- Submit token metadata: name (Marz NeoSphere), symbol (MARZ), decimals (18), website, logo.
+- Place your token logo at `public/assets/marz-token.png` (200–256px, transparent PNG).
+- Store verified Solidity sources in `contracts/verified/` (e.g., `MarzTokenFlattened.sol`).
+- Store token metadata in `contracts/metadata/`.
+- Optional: create a MARZ/ETH liquidity pool (Uniswap) and link it from `/marz-token`.
+
+Helpful links:
+
+- Verify contract: https://etherscan.io/verifyContract
+- Token submission: https://etherscan.io/token-submission
+- CoinGecko listing: https://www.coingecko.com/en/coins/new
+- CoinMarketCap listing: https://coinmarketcap.com/request/
+
 ## 🛂 License
 
 MIT
