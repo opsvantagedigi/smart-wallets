@@ -19,6 +19,7 @@ export default function Footer() {
           <div>
             <h4 className="font-display text-sm mb-3">Products</h4>
             <ul className="space-y-2">
+              <li><Link className="hover:text-primary" href="/marz-network">MARZ Network</Link></li>
               <li><Link className="hover:text-primary" href="/">Smart Wallets</Link></li>
               <li><Link className="hover:text-primary" href="/nft-marketplace">NFT Marketplace</Link></li>
               <li><Link className="hover:text-primary" href="/pricing">Pricing</Link></li>
