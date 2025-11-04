@@ -35,9 +35,15 @@ jobs:
           # Build is optional here because NEXT_PUBLIC_* env vars are provided in Azure at deploy time
           npm run build --if-present
 
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_D14954232F284D05A4BB974F161E82E8 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_994D1CC6843F46BEB851B1F177EEACCA }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_977B4216E28242A38A8351A3EF0341BF }}
+
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
