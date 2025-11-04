@@ -18,14 +18,6 @@ env:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    env:
-      AZURE_CLIENT_ID: ${{ secrets.AZUREAPPSERVICE_CLIENTID_D14954232F284D05A4BB974F161E82E8 }}
-      AZURE_TENANT_ID: ${{ secrets.AZUREAPPSERVICE_TENANTID_994D1CC6843F46BEB851B1F177EEACCA }}
-      AZURE_SUBSCRIPTION_ID: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_977B4216E28242A38A8351A3EF0341BF }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
