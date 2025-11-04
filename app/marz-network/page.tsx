@@ -6,7 +6,7 @@ import { CheckCircle, LockKeyholeOpen, Wallet } from "lucide-react";
 import LoginCard from "../components/login-card";
 import UserInfoCard from "../components/user-info-card";
 import NftMintCard from "../components/nft-mint-card";
-import NeoSphereTokenCard from "../components/neosphere-token-card";
+import MarzTokenCard from "../components/marz-token-card";
 
 export default function MarzNetworkPage() {
   const { isConnected } = useSignerStatus();
@@ -122,7 +122,7 @@ export default function MarzNetworkPage() {
               </button>
             </div>
           </div>
-          <NeoSphereTokenCard />
+          <MarzTokenCard />
         </section>
       ) : (
         <section className="grid gap-8 md:grid-cols-[1fr_2fr] items-start">
@@ -133,7 +133,7 @@ export default function MarzNetworkPage() {
                 <div className="h-1 w-24 rounded bg-primary/30" /> Step 2 of 3
               </div>
             </div>
-            <NeoSphereTokenCard />
+            <MarzTokenCard />
           </div>
           <div>
             <div className="space-y-3">
