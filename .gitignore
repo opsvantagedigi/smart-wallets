@@ -35,4 +35,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-# explicit local env\n.env.local
+# explicit local env
+.env.local
+
+# deployment artifacts
+deploy.zip
