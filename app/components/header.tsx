@@ -21,6 +21,7 @@ export default function Header() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <Link href="/marz-network" className="hover:text-primary">MARZ Network</Link>
+          <Link href="/marz-token" className="hover:text-primary">MARZ Token</Link>
           <Link href="/features" className="hover:text-primary">Features</Link>
           <Link href="/nft-marketplace" className="hover:text-primary">NFTs</Link>
           <Link href="/pricing" className="hover:text-primary">Pricing</Link>
@@ -71,6 +72,7 @@ export default function Header() {
           <div className="container mx-auto px-4 py-4 space-y-3 text-sm">
             <div className="grid gap-2">
               <Link href="/marz-network" onClick={() => setMobileOpen(false)} className="hover:text-primary">MARZ Network</Link>
+              <Link href="/marz-token" onClick={() => setMobileOpen(false)} className="hover:text-primary">MARZ Token</Link>
               <Link href="/features" onClick={() => setMobileOpen(false)} className="hover:text-primary">Features</Link>
               <Link href="/nft-marketplace" onClick={() => setMobileOpen(false)} className="hover:text-primary">NFTs</Link>
               <Link href="/pricing" onClick={() => setMobileOpen(false)} className="hover:text-primary">Pricing</Link>
