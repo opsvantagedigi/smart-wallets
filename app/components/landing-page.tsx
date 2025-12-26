@@ -44,7 +44,7 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
       name: "Sarah Chen", 
       role: "DeFi Trader", 
       avatar: "SC", 
-      quote: "The best wallet UX I've ever experienced. Gasless transactions are a game changer!",
+      quote: "The best wallet UX I&apos;ve ever experienced. Gasless transactions are a game changer!",
       company: "Crypto Capital",
       verified: true,
       savings: "$2,400+ saved in gas fees"
@@ -157,8 +157,8 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Experience seamless Web3 interactions with enterprise-grade security, 
-            gasless transactions, and intuitive design. Join millions of users 
+            Experience seamless Web3 interactions with enterprise-grade security,
+            gasless transactions, and intuitive design. Join millions of users
             managing their digital assets with confidence in the future of finance.
           </p>
 

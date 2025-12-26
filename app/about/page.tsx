@@ -269,9 +269,10 @@ export default function AboutPage() {
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We're a team of passionate builders, researchers, and visionaries dedicated to making 
-            Web3 accessible, secure, and user-friendly for everyone. Our mission is to bridge 
-            the gap between traditional finance and the decentralized future.
+            We&apos;re a team of passionate builders, researchers, and visionaries
+            dedicated to making Web3 accessible, secure, and user-friendly for
+            everyone. Our mission is to bridge the gap between traditional finance
+            and the decentralized future.
           </p>
 
           {/* Company Stats */}
@@ -410,9 +411,10 @@ export default function AboutPage() {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-6">Our Mission</h3>
                       <p className="text-gray-300 leading-relaxed mb-6">
-                        To democratize access to decentralized finance by building the most secure, 
-                        user-friendly, and feature-rich smart wallet platform. We believe that 
-                        everyone should have the power to control their financial future.
+                        To democratize access to decentralized finance by building the most
+                        secure, user-friendly, and feature-rich smart wallet platform. We
+                        believe that everyone should have the power to control their
+                        financial future.
                       </p>
                       <div className="flex items-center space-x-4">
                         <Heart className="h-6 w-6 text-red-400" />
@@ -423,9 +425,9 @@ export default function AboutPage() {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-6">Our Vision</h3>
                       <p className="text-gray-300 leading-relaxed mb-6">
-                        A world where traditional and decentralized finance seamlessly coexist, 
-                        enabling financial freedom and innovation for billions of people worldwide. 
-                        We envision MARZ as the bridge to that future.
+                        A world where traditional and decentralized finance seamlessly
+                        coexist, enabling financial freedom and innovation for billions of
+                        people worldwide. We envision MARZ as the bridge to that future.
                       </p>
                       <div className="flex items-center space-x-4">
                         <Target className="h-6 w-6 text-blue-400" />
@@ -464,9 +466,15 @@ export default function AboutPage() {
                         <div key={index} className="bg-white/5 rounded-2xl p-6 border border-white/10 flex items-center">
                           <Trophy className="h-12 w-12 text-yellow-400 mr-6" />
                           <div className="flex-1">
-                            <h4 className="text-lg font-bold text-white mb-1">{award.title}</h4>
-                            <p className="text-gray-400 text-sm mb-2">{award.issuer} • {award.date}</p>
-                            <p className="text-gray-300">{award.description}</p>
+                            <h4 className="text-lg font-bold text-white mb-1">
+                              {award.title}
+                            </h4>
+                            <p className="text-gray-400 text-sm mb-2">
+                              {award.issuer} • {award.date}
+                            </p>
+                            <p className="text-gray-300">
+                              {award.description}
+                            </p>
                           </div>
                         </div>
                       ))}
@@ -499,7 +507,7 @@ export default function AboutPage() {
                 <div className="mt-16 text-center">
                   <h3 className="text-2xl font-bold text-white mb-6">Want to Partner with Us?</h3>
                   <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                    We're always looking for strategic partnerships that can help us build 
+                    We&apos;re always looking for strategic partnerships that can help us build 
                     better products and serve our users more effectively.
                   </p>
                   <Button 
@@ -536,14 +544,20 @@ export default function AboutPage() {
                       
                       <div className="flex-1 bg-white/5 rounded-2xl p-6 border border-white/10">
                         <div className="flex items-center justify-between mb-4">
-                          <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                          <h3 className="text-xl font-bold text-white">
+                            {item.title}
+                          </h3>
                           <div className="flex items-center space-x-3">
                             <span className="text-gray-400">{item.phase}</span>
-                            <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                              item.status === 'completed' ? 'bg-green-500/20 text-green-400' :
-                              item.status === 'in-progress' ? 'bg-yellow-500/20 text-yellow-400' :
-                              'bg-gray-500/20 text-gray-400'
-                            }`}>
+                            <span
+                              className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                                item.status === 'completed'
+                                  ? 'bg-green-500/20 text-green-400'
+                                  : item.status === 'in-progress'
+                                  ? 'bg-yellow-500/20 text-yellow-400'
+                                  : 'bg-gray-500/20 text-gray-400'
+                              }`}
+                            >
                               {item.status.replace('-', ' ').toUpperCase()}
                             </span>
                           </div>
@@ -576,8 +590,8 @@ export default function AboutPage() {
               Join Our Journey
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              We're building the future of digital finance, and we'd love to have you along for the ride. 
-              Whether you're a user, developer, or potential team member, there's a place for you at MARZ.
+              We&apos;re building the future of digital finance, and we&apos;d love to have you along for the ride. 
+              Whether you&apos;re a user, developer, or potential team member, there&apos;s a place for you at MARZ.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

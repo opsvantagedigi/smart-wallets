@@ -89,7 +89,7 @@ export default function TestimonialsPage() {
       platform: "TechCrunch",
       type: "media",
       title: "Rising Star in Web3 Wallets",
-      description: "Featured in TechCrunch's Web3 innovation spotlight",
+      description: "Featured in TechCrunch&apos;s Web3 innovation spotlight",
       date: "October 2024",
       icon: Star,
       color: "green"
@@ -276,7 +276,7 @@ export default function TestimonialsPage() {
                   </div>
                   
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                    "{testimonials[activeTestimonial].content}"
+                    &quot;{testimonials[activeTestimonial].content}&quot;
                   </p>
                   
                   <div className="flex items-center justify-between">
@@ -372,7 +372,7 @@ export default function TestimonialsPage() {
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-4">"{review.content}"</p>
+                  <p className="text-gray-300 mb-4">&quot;{review.content}&quot;</p>
                   
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center space-x-4">
